@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { HomeWrapper, TextBox, AboutMe } from './Style';
-
+import { HomeWrapper, TextBox} from './Style';
+import Footer from '../Footer/Footer';
+import Skills from './Skills';
 class Home extends Component {
     render() {
-        // const bio = `Full Stack Software Engineer based in NYC. Most of my projects consist of writing server side code in Node.js while using SQLite3 or PostgreSQL to store data. Usually use React for the client with Redux to manage the application state, Axios or Apollo to get data from REST or GraphQL APIs, with either styled components or Sass for styling. Hosting most of my projects on Heroku and ZEIT, or using Google Cloud Platform. `;
         return (
             <HomeWrapper>
                 <TextBox>
@@ -17,12 +17,8 @@ class Home extends Component {
                         <h2>Queens, New York</h2>
                     </section>
                 </TextBox>
-                <AboutMe>
-                    <span>{'test'}</span>
-                    {/* <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                    </span> */}
-                </AboutMe>
+                <Skills/>
+                <Footer/>
             </HomeWrapper>
         );
     }

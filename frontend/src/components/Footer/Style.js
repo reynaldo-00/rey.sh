@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
+    margin-top: 20px;
     width: 100vw;
     height: 84px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 9999;
+    z-index: 5;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    position: absolute;
+    top: 50%;
+    height: 60px;
+    margin-top: -30px;
+    z-index: 5;
+    width: 100%;
     .fa-chevron-right {
         position: absolute;
-        z-index: 5;
         right: 80px;
         top: 50%;
         margin-top: -25px;
@@ -13,7 +18,6 @@ export const Container = styled.div`
     }
     .fa-chevron-left {
         position: absolute;
-        z-index: 5;
         left: 80px;
         top: 50%;
         margin-top: -25px;

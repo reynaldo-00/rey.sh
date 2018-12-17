@@ -5,7 +5,7 @@ export const Container = styled.header`
     /* max-width: 900px; */
     background-color: transparent;
     height: 84px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 99999;
