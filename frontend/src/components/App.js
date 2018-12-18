@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import bg from './assets/splash2.jpg'
 import Home from './Home/Home';
@@ -7,19 +7,17 @@ import { Route } from 'react-router-dom';
 import Projects from './Projects/Projects';
 // import Arrows from './Arrows/Arrows';
 
-class App extends Component {
-  render() {
-    return (
-      <Container>
-        <Background />
-        <ShadeBackground/>
-        <Header/>
-        {/* <Route path="/" render={props => <Arrows {...props}/>}/> */}
-        <Route path="/" exact render={props => <Home {...props}/>}/>
-        <Route path="/projects" exact render={props => <Projects {...props}/>}/>
-      </Container>
-    );
-  }
+const App = () => {
+  return (
+    <Container>
+      <Background />
+      <ShadeBackground/>
+      <Header/>
+      {/* <Route path="/" render={props => <Arrows {...props}/>}/> */}
+      <Route path="/" exact render={props => <Home {...props}/>}/>
+      <Route path="/projects" exact render={props => <Projects {...props}/>}/>
+    </Container>
+  );
 }
 
 export default App;

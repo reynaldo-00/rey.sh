@@ -12,6 +12,10 @@ const Skills = () => {
                     <span>Apollo</span>
                 </Skill>
                 <Skill>
+                    <SVG gatsby/>
+                    <span>Gatsby</span>
+                </Skill>
+                <Skill>
                     <SVG styled/>
                     <span>Styled C</span>
                 </Skill>
