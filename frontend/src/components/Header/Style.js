@@ -5,7 +5,8 @@ export const Container = styled.header`
     /* max-width: 900px; */
     background-color: transparent;
     height: 84px;
-    position: fixed;
+    /* position: fixed; */
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 99999;
@@ -25,5 +26,6 @@ export const Navigation = styled.nav`
         font-size: 16px;
         font-weight: 800;
         color: white;
+        user-select: none;
     }
 `;

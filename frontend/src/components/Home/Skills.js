@@ -28,12 +28,12 @@ const Skills = () => {
                     <span>Node</span>
                 </Skill>
                 <Skill>
-                    <SVG knex/>
-                    <span>Knex</span>
-                </Skill>
-                <Skill>
                     <SVG graphql/>
                     <span>GraphQL</span>
+                </Skill>
+                <Skill>
+                    <SVG knex/>
+                    <span>Knex</span>
                 </Skill>
                 <Skill>
                     <SVG jwt/>

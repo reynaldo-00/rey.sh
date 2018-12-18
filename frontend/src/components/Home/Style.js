@@ -34,6 +34,7 @@ export const TextBox = styled.div`
         letter-spacing: 1.2px;
         line-height: 55px;
         margin: 20px 0;
+        user-select: none;
     }
     section {
         display: block;
@@ -41,6 +42,7 @@ export const TextBox = styled.div`
         justify-content: center; */
         position: relative;
         height: 45px;
+        user-select: none;
         h2 {
             display: inline-block;
             line-height: 45px;
@@ -55,7 +57,7 @@ export const TextBox = styled.div`
 `;
 
 export const AboutMe = styled.div`
-    width: 600px;
+    width: 700px;
     background-color: rgba(0,0,0,0.6);
     /* background-color: white; */
     border-radius: 12px;
@@ -73,6 +75,7 @@ export const Title = styled.span`
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 10px;
+    user-select: none;
 `;
 
 export const SkillWrapper = styled.div`
@@ -86,6 +89,8 @@ export const Skill = styled.span`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    user-select: none;
+    cursor: pointer;
     span {
         font-size: 16px;
         font-weight: 600;

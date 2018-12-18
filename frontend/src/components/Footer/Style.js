@@ -10,6 +10,10 @@ export const Container = styled.footer`
     align-items: center;
     color: white;
     background: transparent;
+    a {
+        text-decoration: none;
+        color: white;
+    }
     i {
         font-size: 32px;
         margin: 0 30px;
