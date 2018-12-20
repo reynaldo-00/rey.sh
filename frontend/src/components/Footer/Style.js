@@ -12,7 +12,10 @@ export const Container = styled.footer`
     background: transparent;
     a {
         text-decoration: none;
-        color: white;
+        color: rgba(255,255,255, 0.74);
+        :hover {
+            color: white;
+        }
     }
     i {
         font-size: 32px;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { HomeWrapper, TextBox} from './Style';
-import Footer from '../Footer/Footer';
 import Skills from './Skills';
 const Home = () => {
     return (
@@ -17,7 +16,6 @@ const Home = () => {
                 </section>
             </TextBox>
             <Skills/>
-            <Footer/>
         </HomeWrapper>
     );
 }

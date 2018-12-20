@@ -7,10 +7,10 @@ const Skills = () => {
         <AboutMe>
             <Title>build things using</Title>
             <SkillWrapper>
-                <Skill>
+                {/* <Skill>
                     <SVG apollo/>
                     <span>Apollo</span>
-                </Skill>
+                </Skill> */}
                 <Skill>
                     <SVG gatsby/>
                     <span>Gatsby</span>
@@ -43,10 +43,10 @@ const Skills = () => {
                     <SVG jwt/>
                     <span>JWT</span>
                 </Skill>
-                <Skill>
+                {/* <Skill>
                     <SVG oauth/>
                     <span>OAuth</span>
-                </Skill>
+                </Skill> */}
             </SkillWrapper>
         </AboutMe>
     );

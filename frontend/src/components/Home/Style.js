@@ -4,11 +4,10 @@ import styledLogo from '../assets/styled.png';
 import oauthLogo from '../assets/oauth.png';
 
 export const HomeWrapper = styled.div`
-    position: absolute;
-    z-index: 3;
+    /* position: absolute; */
+    /* z-index: 3; */
     width: 100%;
     max-width: 1250px;
-    /* height: 100%; */
     top: 0;
     left: 0;
     color: white;
@@ -21,12 +20,17 @@ export const HomeWrapper = styled.div`
 export const TextBox = styled.div`
     padding-left: 80px;
     position: relative;
-    margin-top: 120px;
+    margin-top: 60px;
     text-shadow: 1px 1px rgba(0,0,0,0.3);
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     flex-direction: column;
+    @media (max-width: 850px) {
+        margin: 0 auto;
+        /* margin-top: 100px; */
+        padding-left: 0;
+    }
     h1 {
         height: 55px;
         font-size: 75px;
@@ -35,6 +39,16 @@ export const TextBox = styled.div`
         line-height: 55px;
         margin: 20px 0;
         user-select: none;
+        @media (max-width: 680px) {
+            text-align: center;
+            height: 150px;
+            line-height: 75px;
+        }
+        @media (max-width: 440px) {
+            font-size: 55px;
+            line-height: 55px;
+            height: 100px;
+        }
     }
     section {
         display: block;
@@ -43,6 +57,7 @@ export const TextBox = styled.div`
         position: relative;
         height: 45px;
         user-select: none;
+        margin-left: 20px;
         h2 {
             display: inline-block;
             line-height: 45px;
@@ -52,6 +67,9 @@ export const TextBox = styled.div`
         i {
             display: inline-block;
             font-size: 28px;
+        }
+        @media (max-width: 850px) {
+            margin: 0 auto;
         }
     }
 `;
@@ -69,6 +87,15 @@ export const AboutMe = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 100px;
+    @media (max-width: 850px) {
+        /* width: 90%; */
+        width: 530px;
+        margin-top: 80px;
+    }
+    @media (max-width: 550px) {
+        width: 90%;
+    }
 `;
 
 export const Title = styled.span`
@@ -77,25 +104,49 @@ export const Title = styled.span`
     margin-bottom: 10px;
     user-select: none;
 `;
-
-export const SkillWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-`;
-
 export const Skill = styled.span`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     user-select: none;
-    cursor: pointer;
+    /* cursor: pointer; */
     span {
         font-size: 16px;
         font-weight: 600;
     }
+    @media (max-width: 850px) {
+        margin: 10px 15px;
+    }
 `;
+
+export const SkillWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: 850px) {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    @media (max-width: 850px) {
+        ${Skill}:nth-child(3) {
+            order: -1;
+        }
+        ${Skill}:nth-child(4) {
+            order: -1;
+        }
+        ${Skill}:nth-child(5) {
+            order: -1;
+        }
+        ${Skill}:nth-child(6) {
+            order: -1;
+        }
+        ${Skill}:nth-child(7) {
+            order: -1;
+        }
+    }
+`;
+
 
 export const SVG = styled.div`
     width: 36px;

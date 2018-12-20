@@ -1,11 +1,14 @@
 import React from 'react';
-import { Container, Resume } from './Style';
+import { 
+    Container, 
+    // Resume 
+} from './Style';
 
 const Footer = () => {
     return (
         <Container>
             <a 
-                href="https://codepen.io/reynaldo-00/" 
+                href="https://codepen.io/reynld/" 
                 rel="noopener noreferrer"
                 target="_blank"
             >
@@ -13,22 +16,22 @@ const Footer = () => {
             </a>
 
             <a 
-                href="https://github.com/reynaldo-00" 
+                href="https://github.com/reynld" 
                 rel="noopener noreferrer"
                 target="_blank"
             >
                 <i className="fab fa-github"></i>
             </a>
-            <Resume/>
+            {/* <Resume/> */}
             <a 
-                href="https://www.linkedin.com/in/reynaldo-00/" 
+                href="https://www.linkedin.com/in/reynld/" 
                 rel="noopener noreferrer"
                 target="_blank"
             >
                 <i className="fab fa-linkedin-in"></i>
             </a>
             <a 
-                href="https://twitter.com/chris_rey_" 
+                href="https://twitter.com/creynl" 
                 rel="noopener noreferrer"
                 target="_blank"
             >

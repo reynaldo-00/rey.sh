@@ -1,21 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 import bg from './assets/splash2.jpg'
+// import Header from './Header/Header';
 import Home from './Home/Home';
-import Header from './Header/Header';
-import { Route } from 'react-router-dom';
-import Projects from './Projects/Projects';
-// import Arrows from './Arrows/Arrows';
+// import About from './About/About'
+// import Projects from './Projects/Projects';
+import Footer from './Footer/Footer';
 
 const App = () => {
   return (
     <Container>
       <Background />
       <ShadeBackground/>
-      <Header/>
-      {/* <Route path="/" render={props => <Arrows {...props}/>}/> */}
-      <Route path="/" exact render={props => <Home {...props}/>}/>
-      <Route path="/projects" exact render={props => <Projects {...props}/>}/>
+      <Footer />
+      {/* <Header/> */}
+      <Home />
+      {/* <About/>
+      <Projects /> */}
     </Container>
   );
 }
@@ -34,14 +35,16 @@ const Background = styled.div`
   position: fixed;
   left: 0; 
   top: 0;
-  z-index: 1;
+  z-index: -2;
   filter: grayscale(30%);
 `;
 
 export const Container = styled.div`
   width: 100vw;
+  min-width: 320px;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -54,5 +57,5 @@ export const ShadeBackground = styled.div`
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: -1;
 `;

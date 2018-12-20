@@ -4,7 +4,7 @@ import { Container } from './Style';
 const Projects = () => {
     return (
         <Container>
-            projects
+            <h2>Projects</h2>
         </Container>
     );
 }
