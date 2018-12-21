@@ -87,7 +87,7 @@ export const AboutMe = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     @media (max-width: 850px) {
         /* width: 90%; */
         width: 530px;
