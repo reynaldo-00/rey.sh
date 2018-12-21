@@ -6,6 +6,9 @@ export const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
     font-family: 'Open Sans', sans-serif;
   }
+  * {
+    box-sizing: border-box;
+  }
 `
 
 export const Background = styled.div`
