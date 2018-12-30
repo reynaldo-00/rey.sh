@@ -6,6 +6,9 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
+
+	"github.com/joho/godotenv"
 )
 
 // GQLQuery struct to hold query string
@@ -28,23 +31,65 @@ func GetServerIsUp(w http.ResponseWriter, req *http.Request) {
 
 // GetProjects gets pinned repositories of my profile
 func GetProjects(w http.ResponseWriter, req *http.Request) {
-	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	w.Header().Set("Access-Control-Allow-Origin", "*")
 
+	err := godotenv.Load()
+	githubKey := os.Getenv("GIT_API_KEY")
 	pinnedRepo := GQLQuery{
-		Query: "query {\n  viewer {\n    pinnedRepositories(first: 10){\n      totalCount\n      nodes {\n        id\n        url\n        pushedAt\n        shortDescriptionHTML\n        defaultBranchRef {\n          target {\n            ...on Commit {\n              history(first:10) {\n                totalCount\n              }\n            }\n          }\n        }\n        repositoryTopics(first:10) {\n          edges {\n            node {\n              id\n              topic {\n                name\n              }\n            }\n          }\n        }\n        languages(first: 10) {\n          nodes {\n            color\n            id\n            name\n          }\n        }\n        primaryLanguage {\n          color\n          id\n          name\n        }\n      }\n    }\n  }\n}",
-	}
-
+		Query: `query {
+			viewer {
+			  pinnedRepositories(first: 10){
+				totalCount
+				nodes {
+				  id
+				  url
+				  pushedAt
+				  shortDescriptionHTML
+				  defaultBranchRef {
+					target {
+					  ...on Commit {
+						history(first:10) {
+						  totalCount
+						}
+					  }
+					}
+				  }
+				  repositoryTopics(first:10) {
+					edges {
+					  node {
+						id
+						topic {
+						  name
+						}
+					  }
+					}
+				  }
+				  languages(first: 10) {
+					nodes {
+					  color
+					  id
+					  name
+					}
+				  }
+				  primaryLanguage {
+					color
+					id
+					name
+				  }
+				}
+			  }
+			}
+		  }
+		`}
 	pinquery, _ := json.Marshal(pinnedRepo)
 
 	client := &http.Client{}
-
 	req, error := http.NewRequest("POST", "https://api.github.com/graphql", bytes.NewBuffer(pinquery))
 	if error != nil {
 		log.Fatalln(error)
 	}
+
 	req.Header.Add("Content-Type", "application/json; charset=UTF-8")
-	req.Header.Add("Authorization", "bearer githubkey")
+	req.Header.Add("Authorization", "bearer "+githubKey)
 
 	resp, err := client.Do(req)
 	if err != nil {
@@ -54,6 +99,9 @@ func GetProjects(w http.ResponseWriter, req *http.Request) {
 	json.NewDecoder(resp.Body).Decode(&result)
 	// log.Println(result)
 	// log.Println(result["data"])
+
+	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	json.NewEncoder(w).Encode(result["data"])
 	log.Println("GET /repos successful")
 }
