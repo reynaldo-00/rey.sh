@@ -15,6 +15,7 @@ func main() {
 	port = ":9001"
 
 	r.HandleFunc("/", GetServerIsUp).Methods("GET")
+	r.HandleFunc("/repos", GetProjects).Methods("GET")
 	fmt.Println("Server live on port " + port)
 	http.ListenAndServe(port, r)
 }
