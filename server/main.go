@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -16,6 +17,7 @@ func main() {
 
 	r.HandleFunc("/", GetServerIsUp).Methods("GET")
 	r.HandleFunc("/repos", GetProjects).Methods("GET")
+	r.HandleFunc("/spotify", GetSpotify).Methods("GET")
 	fmt.Println("Server live on port " + port)
-	http.ListenAndServe(port, r)
+	log.Fatal(http.ListenAndServe(port, r))
 }
