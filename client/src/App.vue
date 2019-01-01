@@ -3,6 +3,7 @@
         <Name/>
         <Bio/>
         <Tech/>
+        <Projects/>
     </div>
 </template>
 
@@ -10,13 +11,15 @@
 import Name from './components/Name'
 import Bio from './components/Bio'
 import Tech from './components/Tech'
+import Projects from './components/Projects'
 
 export default {
     name: 'App',
     components: {
         Name,
         Bio,
-        Tech
+        Tech,
+        Projects
     }
 }
 </script>
