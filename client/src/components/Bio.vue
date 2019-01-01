@@ -15,13 +15,17 @@ export default {
 </script>
 
 <style scoped>
+    div {
+        width: 100%;
+        height: 150px;
+    }
     p {
-        width: 605px;
+        width: 425px;
         font-weight: 600;
         font-size: 22px;
         text-align: right;
         float: right;
-        margin-top: -30px;
+        margin-top: -100px;
         line-height: 28px;
     }
 

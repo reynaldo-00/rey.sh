@@ -1,9 +1,18 @@
 <template>
     <div class="container">
-        <Name/>
-        <Bio/>
-        <Tech/>
-        <Projects/>
+
+        <div class="section first">
+            <Name/>
+            <Bio/>
+        </div>
+
+        <div class="section">
+            <Tech/>
+        </div>
+
+        <div class="section">
+            <Projects/>
+        </div>
         <Spotify/>
     </div>
 </template>
@@ -42,6 +51,26 @@ export default {
     }
     .container {
         width: 100%;
+        max-width: 1050px;
+        min-width: 835px;
         padding: 0px 50px;
+        margin: 0 auto;
+    }
+    .section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+    }
+
+    .first {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
     }
 </style>
