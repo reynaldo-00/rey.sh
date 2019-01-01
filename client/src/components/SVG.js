@@ -3,8 +3,25 @@ import styled, {css} from 'vue-styled-components';
 import styledLogo from '../assets/styled.png';
 import oauthLogo from '../assets/oauth.png';
 
+const svgProps = {
+    node: Boolean,
+    react: Boolean,
+    redux: Boolean,
+    styled: Boolean,
+    less: Boolean,
+    knex: Boolean,
+    jwt: Boolean,
+    oauth: Boolean,
+    apollo: Boolean,
+    graphql: Boolean,
+    gatsby: Boolean,
+    linkedin: Boolean,
+    twitter: Boolean,
+    codepen: Boolean,
+    github: Boolean,
+}
 
-export default styled.div`
+const StyledSVG = styled('div', svgProps)`
     width: 36px;
     height: 36px;
     background-size: 36px 36px;
@@ -66,3 +83,7 @@ export default styled.div`
         background-image: url('data:image/svg+xml;utf8;base64,')`
     }
 `;
+
+
+
+export default StyledSVG
