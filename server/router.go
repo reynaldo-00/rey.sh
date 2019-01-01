@@ -39,7 +39,8 @@ func GetProjects(w http.ResponseWriter, req *http.Request) {
 			  pinnedRepositories(first: 10){
 				totalCount
 				nodes {
-				  id
+					id
+					name
 				  url
 				  pushedAt
 				  shortDescriptionHTML
@@ -100,6 +101,11 @@ func GetProjects(w http.ResponseWriter, req *http.Request) {
 
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
+
+	// data := result["data"]
+	// viewer := data["viewer"]
+
+	// fmt.Printf("%+v\n", result["data"])
 	json.NewEncoder(w).Encode(result["data"])
 	log.Println("GET /repos successful")
 }
