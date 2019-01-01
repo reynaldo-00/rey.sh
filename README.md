@@ -1,6 +1,3 @@
-## Personal Portfolio site
+## Personal Portfolio Site
 
-#### Keys stored in .env file on server
-
-GIT_API_KEY = personal api key for github
-SPOTIFY_TOKEN = spotify access token
+Built with a Vue frontend and a Golang backend
