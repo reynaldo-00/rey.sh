@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <Name/>
         <Bio/>
         <Tech/>
@@ -22,5 +22,20 @@ export default {
 </script>
 
 <style>
-
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+        font-family: 'Open Sans';
+    }
+    .container {
+        width: 100%;
+        padding: 0px 50px;
+    }
 </style>

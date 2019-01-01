@@ -1,10 +1,11 @@
 <template>
-    <p>
-        {{ bio }}
-    </p>
+    <div>
+        <p>{{ bio }}</p>
+    </div>
 </template>
 
 <script>
+
 export default {
     name: 'Bio',
     data: () => ({
@@ -13,6 +14,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+    p {
+        width: 605px;
+        font-weight: 600;
+        font-size: 22px;
+        text-align: right;
+        float: right;
+        margin-top: -30px;
+        line-height: 28px;
+    }
 
 </style>
