@@ -4,6 +4,7 @@
         <Bio/>
         <Tech/>
         <Projects/>
+        <Spotify/>
     </div>
 </template>
 
@@ -12,6 +13,7 @@ import Name from './components/Name'
 import Bio from './components/Bio'
 import Tech from './components/Tech'
 import Projects from './components/Projects'
+import Spotify from './components/Spotify'
 
 export default {
     name: 'App',
@@ -19,7 +21,8 @@ export default {
         Name,
         Bio,
         Tech,
-        Projects
+        Projects,
+        Spotify
     }
 }
 </script>
