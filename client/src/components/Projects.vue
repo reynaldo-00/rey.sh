@@ -23,9 +23,8 @@ export default {
     }),
     methods: {
         getProjects: async function()  {
-            const projectsResponse = await axios('http://localhost:9001/repos');
-            const pro = projectsResponse.data.viewer.pinnedRepositories.nodes;
-            this.projects = pro;
+            const resp = await axios('http://localhost:9001/repos');
+            this.projects = resp.data;
         },
     },
     beforeMount() {
