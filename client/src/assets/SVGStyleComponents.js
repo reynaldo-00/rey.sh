@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components';
 
-import styledLogo from '../assets/styled.png';
-import oauthLogo from '../assets/oauth.png';
+import styledLogo from '../styled.png';
+import oauthLogo from '../oauth.png';
 
 
 export const SVG = styled.div`
