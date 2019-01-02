@@ -1,6 +1,5 @@
 <template>
     <div class="container">
-
         <div class="section first">
             <Header/>
             <NameBio/>
@@ -9,7 +8,6 @@
         <div class="section">
             <Tech/>
         </div>
-
         <div class="section">
             <Projects/>
         </div>
@@ -63,6 +61,7 @@ export default {
         align-items: center;
         text-align: center;
         height: 100vh;
+        min-height: 600px;
         position: relative;
     }
 

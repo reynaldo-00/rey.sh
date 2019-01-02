@@ -11,7 +11,14 @@
                 {{ last }}
             </h2>
         </div>
-        <p>Software Engineer based in NYC. Currently trying to expand my knowledge beyond my proficient stack (<StyledSVG react/>React and<StyledSVG node/>Node.js) and creat application using<StyledSVG vue/>Vue on the client with a server side written in <StyledSVG golang/>Golang. All while making calls to and creating a<StyledSVG graphql/>GraphQL API.</p>
+        <p>
+            Software Engineer based in NYC. 
+            Currently trying to expand my knowledge beyond my 
+            proficient stack (<StyledSVG logo="react"/>React and<StyledSVG logo="node"/>Node.js) 
+            and create applications using<StyledSVG logo="vue"/>Vue on the client with a server 
+            side written in <StyledSVG logo="golang"/>Golang. All while making calls to and 
+            creating <StyledSVG logo="graphql"/>GraphQL APIs.
+        </p>
     </div>
 </template>
 
@@ -40,16 +47,19 @@ export default {
         height: 210px;
     }
     h2 {
-        font-size: 70px;
+        font-family: 'Montserrat';
+        font-size: 64px;
         font-weight: 800;
         margin: 0px;
         line-height: 70px;
+        user-select: none;
     }
     p {
         font-weight: 600;
-        font-size: 22px;
+        font-size: 18px;
         line-height: 28px;
-        margin-top: 39px;
+        margin-top: 38px;
+        user-select: none;
     }
 
 </style>

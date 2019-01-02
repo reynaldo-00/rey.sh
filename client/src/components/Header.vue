@@ -9,9 +9,9 @@
         <a class="item" href="https://www.linkedin.com/in/reynld/" target="_blank">
             <StyledSVG linkedin/>
         </a>
-        <a class="item" href="https://twitter.com/creynl" target="_blank">
+        <!-- <a class="item" href="https://twitter.com/creynl" target="_blank">
             <StyledSVG twitter/>
-        </a>
+        </a> -->
     </div>
 </template>
 
