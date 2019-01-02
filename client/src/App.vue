@@ -2,8 +2,7 @@
     <div class="container">
 
         <div class="section first">
-            <Name/>
-            <Bio/>
+            <NameBio/>
         </div>
 
         <div class="section">
@@ -18,8 +17,7 @@
 </template>
 
 <script>
-import Name from './components/Name'
-import Bio from './components/Bio'
+import NameBio from './components/NameBio'
 import Tech from './components/Tech'
 import Projects from './components/Projects'
 import Spotify from './components/Spotify'
@@ -27,8 +25,7 @@ import Spotify from './components/Spotify'
 export default {
     name: 'App',
     components: {
-        Name,
-        Bio,
+        NameBio,
         Tech,
         Projects,
         Spotify
@@ -66,11 +63,6 @@ export default {
     }
 
     .first {
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
         text-align: left;
     }
 </style>
