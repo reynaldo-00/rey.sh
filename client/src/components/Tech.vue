@@ -1,6 +1,5 @@
 <template>
     <div>
-        <StyledSVG react/>
         <p>
             {{ techBio }}
         </p>

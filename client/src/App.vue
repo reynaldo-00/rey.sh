@@ -2,6 +2,7 @@
     <div class="container">
 
         <div class="section first">
+            <Header/>
             <NameBio/>
         </div>
 
@@ -17,6 +18,7 @@
 </template>
 
 <script>
+import Header from './components/Header'
 import NameBio from './components/NameBio'
 import Tech from './components/Tech'
 import Projects from './components/Projects'
@@ -28,7 +30,8 @@ export default {
         NameBio,
         Tech,
         Projects,
-        Spotify
+        Spotify,
+        Header
     }
 }
 </script>
@@ -60,6 +63,7 @@ export default {
         align-items: center;
         text-align: center;
         height: 100vh;
+        position: relative;
     }
 
     .first {
