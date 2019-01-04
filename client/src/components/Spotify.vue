@@ -90,6 +90,7 @@ export default {
     }
     h3 {
         font-size: 16px;
+        font-size: 1vw;
         font-weight: 600;
         margin: 0px;
     }
