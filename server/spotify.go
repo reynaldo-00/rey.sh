@@ -21,7 +21,7 @@ type TokenResponse struct {
 	RefreshToken string `json:"refresh_token"`
 }
 
-// Makes call to spotify api to get a refreshed token
+// GetAccessToken Makes call to spotify api to get a refreshed token
 func GetAccessToken() string {
 	godotenv.Load()
 	refereshURL := "https://accounts.spotify.com/api/token"
