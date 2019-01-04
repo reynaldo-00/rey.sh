@@ -154,33 +154,3 @@ func GetProjects(w http.ResponseWriter, req *http.Request) {
 	json.NewEncoder(w).Encode(result.Data.Viewer.PinnedRepositories.Nodes)
 	log.Println("GET /repos successful")
 }
-
-// GetSpotify gets my the song im currently listening to
-func GetSpotify(w http.ResponseWriter, req *http.Request) {
-	err := godotenv.Load()
-	spotifyToken := os.Getenv("SPOTIFY_TOKEN")
-
-	url := "https://api.spotify.com/v1/me/player/currently-playing"
-
-	client := &http.Client{}
-	req, error := http.NewRequest("GET", url, nil)
-	if error != nil {
-		log.Fatalln(error)
-	}
-
-	req.Header.Add("Content-Type", "application/json; charset=UTF-8")
-	req.Header.Add("Authorization", "Bearer "+spotifyToken)
-
-	resp, err := client.Do(req)
-	if err != nil {
-		log.Fatalln(err)
-	}
-
-	var result map[string]interface{}
-	json.NewDecoder(resp.Body).Decode(&result)
-
-	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	w.Header().Set("Access-Control-Allow-Origin", "*")
-	json.NewEncoder(w).Encode(result)
-	log.Println("GET /spotify successful")
-}
