@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <Spotify/>
         <div class="section first">
             <Header/>
             <NameBio/>
@@ -11,7 +12,6 @@
         <div class="section">
             <Projects/>
         </div>
-        <Spotify/>
     </div>
 </template>
 
