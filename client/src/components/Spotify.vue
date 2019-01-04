@@ -1,8 +1,9 @@
 <template>
     <a :href="getSongLink" target="_blank">
         <StyledSVG logo="spotify"/>
-        <span>
+        <span class="info-container">
             <h3>{{ getSongAndArtist }}</h3>
+            <SoundBars/>
         </span>
         <img :src="getAlbumPhoto"/>
     </a>
@@ -10,11 +11,14 @@
 
 <script>
 import axios from 'axios';
+import SoundBars from './SoundBars'
 import StyledSVG from './SVG.js'
+
 export default {
     name: 'Spotify',
     components: {
-        StyledSVG
+        StyledSVG,
+        SoundBars
     },
     data: () => ({
         currentlyPlaying: null,
@@ -63,7 +67,7 @@ export default {
         background-color: #2AB759;
         color: white;
         border-bottom-left-radius: 30px;
-        z-index: 99;
+        z-index: 1;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -75,13 +79,14 @@ export default {
     img {
         margin-left: 20px;
     }
-    span {
+    .info-contianer {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         height: 100%;
-        padding: 10px 0px;
+        padding: 10px 10px;
+        width: 200px;
     }
     h3 {
         font-size: 16px;
