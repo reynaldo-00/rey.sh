@@ -44,6 +44,8 @@ export default {
     border: solid 1px white;
     border-radius: 12px;
     padding: 10px;
+    align-content: center;
+    flex-flow: row wrap;
 }
 
 .tech-item {

@@ -115,7 +115,7 @@ export default {
 
     h3 {
         font-size: 16px;
-        font-size: 1.05vw;
+        font-size: 15px;
         font-weight: 600;
         margin: 0px;
         z-index: 99;
