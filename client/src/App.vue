@@ -4,6 +4,7 @@
         <div class="section first">
             <Header/>
             <NameBio/>
+            <BuildWith/>
         </div>
 
         <!-- <div class="section">
@@ -21,6 +22,7 @@ import NameBio from './components/NameBio'
 import Tech from './components/Tech'
 import Projects from './components/Projects'
 import Spotify from './components/Spotify'
+import BuildWith from './components/BuildWith'
 
 export default {
     name: 'App',
@@ -29,7 +31,8 @@ export default {
         Tech,
         Projects,
         Spotify,
-        Header
+        Header,
+        BuildWith,
     }
 }
 </script>
