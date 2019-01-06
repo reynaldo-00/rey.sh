@@ -32,7 +32,7 @@ export default {
     height: 120px;
     position: absolute;
     left: 0px;
-    top: 0px;
+    top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -36,7 +36,6 @@ export default {
 .tech-container {
     width: 90%;
     max-width: 700px;
-    height: 100px;
     position: absolute;
     bottom: 30px;
     display: flex;
