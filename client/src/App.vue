@@ -6,12 +6,12 @@
             <NameBio/>
         </div>
 
-        <div class="section">
+        <!-- <div class="section">
             <Tech/>
         </div>
         <div class="section">
             <Projects/>
-        </div>
+        </div> -->
     </div>
 </template>
 

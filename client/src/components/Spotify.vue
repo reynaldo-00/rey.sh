@@ -1,12 +1,19 @@
 <template>
-    <a :href="getSongLink" target="_blank">
-        <StyledSVG logo="spotify"/>
-        <span class="info-container">
-            <h3>{{ getSongAndArtist }}</h3>
-            <SoundBars/>
-        </span>
-        <img :src="getAlbumPhoto"/>
-    </a>
+    <transition name="slide">
+        <a 
+            v-if="currentlyPlaying" 
+            :href="getSongLink" 
+            target="_blank" 
+            class="spotify-wrapper"
+        >
+            <StyledSVG logo="spotify"/>
+            <span class="info-container">
+                <h3>{{ getSongAndArtist }}</h3>
+                <SoundBars/>
+            </span>
+            <img :src="getAlbumPhoto"/>
+        </a>
+    </transition>
 </template>
 
 <script>
@@ -27,7 +34,7 @@ export default {
         getCurrentlyPlaying: async function() {
             const songRes = await axios('http://localhost:9001/spotify');
             this.currentlyPlaying = songRes.data;
-        }
+        },
     },
     computed: {
         getAlbumPhoto() {
@@ -49,19 +56,35 @@ export default {
                 return this.currentlyPlaying.item.external_urls.spotify;
             }
             return '#';
+        },
+        animateIn() {
+            if (!!this.currentlyPlaying && !!this.currentlyPlaying.item) {
+                return 'slideIn'
+            }
+            return ''
         }
     },
     beforeMount() {
         this.getCurrentlyPlaying();
-    }
+    },
 }
 </script>
 
 <style scoped>
-    a{
+    .slide-enter-active, .slide-leave-active {
+        transition: transform 550ms;
+    }
+    .slide-enter{
+        transform: translateX(300px);
+    }
+    .slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        transform: translateX(-300px);
+    }
+
+    a {
         position: fixed;
         top: 0;
-        right: 0;
+        right: 0px;
         width: 300px;
         height: 64px;
         background-color: #2AB759;
@@ -79,6 +102,7 @@ export default {
     img {
         margin-left: 20px;
     }
+
     .info-contianer {
         display: flex;
         flex-direction: column;
@@ -88,10 +112,13 @@ export default {
         padding: 10px 10px;
         width: 200px;
     }
+
     h3 {
         font-size: 16px;
-        font-size: 1vw;
+        font-size: 1.05vw;
         font-weight: 600;
         margin: 0px;
+        z-index: 99;
+        text-shadow: 1px 1px 3px #000;
     }
 </style>
