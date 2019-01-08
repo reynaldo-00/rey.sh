@@ -48,6 +48,12 @@ export default {
     flex-flow: row wrap;
 }
 
+@media (max-width: 825px) {
+    .tech-container {
+        max-width: 470px;
+    }        
+}
+
 .tech-item {
     display: flex;
     flex-direction: column;

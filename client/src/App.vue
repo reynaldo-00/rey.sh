@@ -67,6 +67,18 @@ export default {
         min-height: 600px;
         position: relative;
     }
+    @media (max-width: 825px) {
+        .section {
+            min-height: 920px;
+        }        
+    }
+    
+    @media (max-width: 760px) {
+        /* mobile view */
+        .section {
+            min-height: 920px;
+        }        
+    }
 
     .first {
         text-align: left;
