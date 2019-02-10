@@ -10,7 +10,7 @@
     <p class="description">
       {{description}}
       <span>
-        You can check out my recent project on my
+        You can check out my recent projects on my
         <a href="https://github.com/reynld">Github</a> and
         <a href="https://www.linkedin.com/in/reynld/">Linkedin</a>.
       </span>
@@ -33,7 +33,7 @@ export default {
     title: "Software Engineer",
     location: "NYC",
     description:
-      "Fullstack Software Engineer, powerlifter and team player. I am looking for opportunities where i can impact and improve peoples lives through code."
+      "Fullstack Software Engineer, powerlifter, and team player. I am looking for opportunities where I can impact and improve peoples lives through code."
   })
 };
 </script>
