@@ -19,7 +19,7 @@
 <script>
 import axios from 'axios';
 import SoundBars from './SoundBars'
-import StyledSVG from './SVG.js'
+import StyledSVG from '../../shared/SVG.js'
 
 export default {
     name: 'Spotify',

@@ -73,22 +73,12 @@ export default {
     mounted(){
         let elem = document.querySelectorAll('.bar');
         let count = elem.length;
-        console.log(count);
-
         let loop = function(){ 
             setTimeout(function(){
                 elem.forEach((el, i) => {
                     let height = (Math.random() * 30) + 1;
                     const opacity = .75-( i / count)/2;
-                    
-                    // el.style.background = `rgba(0, 0, 0,'+(.75-(${i} / ${count})/2)+')`;
-                    // el.style.bottom = `bottom: ${height}`;
-                    // el.style.height = `height: ${height}`;
-
                     el.setAttribute("style", `background: rgba(255, 255, 255, ${opacity}); bottom: ${height}px; height: ${height}px`)
-
-                    // el.setAttribute("style", `bottom: ${height}`);
-                    // el.setAttribute("style", `height: ${height}`);
                 })
                 loop()
             }, 300)

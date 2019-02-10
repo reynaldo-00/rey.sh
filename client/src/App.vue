@@ -1,43 +1,24 @@
 <template>
     <div class="container">
         <Spotify/>
-        <div class="section first">
-            <Header/>
-            <NameBio/>
-            <BuildWith/>
-        </div>
-
-        <!-- <div class="section">
-            <Tech/>
-        </div>
-        <div class="section">
-            <Projects/>
-        </div> -->
+        <AboveTheFold/>
     </div>
 </template>
 
 <script>
-import Header from './components/Header'
-import NameBio from './components/NameBio'
-import Tech from './components/Tech'
-import Projects from './components/Projects'
-import Spotify from './components/Spotify'
-import BuildWith from './components/BuildWith'
+import Spotify from './components/Spotify/index'
+import AboveTheFold from './components/AboveTheFold/index';
 
 export default {
     name: 'App',
     components: {
-        NameBio,
-        Tech,
-        Projects,
         Spotify,
-        Header,
-        BuildWith,
+        AboveTheFold
     }
 }
 </script>
 
-<style>
+<style lang="scss">
     * {
         box-sizing: border-box;
     }
@@ -52,35 +33,23 @@ export default {
     }
     .container {
         width: 100%;
-        max-width: 1050px;
-        min-width: 435px;
-        padding: 0px 50px;
+        max-width: 1000px;
         margin: 0 auto;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
     .section {
         width: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        height: 100vh;
-        min-height: 600px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         position: relative;
     }
-    @media (max-width: 825px) {
-        .section {
-            min-height: 920px;
-        }        
-    }
-    
-    @media (max-width: 760px) {
-        /* mobile view */
-        .section {
-            min-height: 920px;
-        }        
-    }
-
     .first {
-        text-align: left;
+        height: 100vh;
     }
 </style>
