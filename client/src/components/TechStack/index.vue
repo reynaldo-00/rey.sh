@@ -34,7 +34,7 @@ export default {
         justify-content: space-around;
         align-items: center;
         padding: 48px 24px;
-        height: 500px;
+        height: 650px;
         width: 100%;
         .info {
             width: 50%;

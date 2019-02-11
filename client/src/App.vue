@@ -2,18 +2,21 @@
     <div class="container">
         <AboveTheFold/>
         <TechStack/>
+        <Projects/>
     </div>
 </template>
 
 <script>
 import AboveTheFold from './components/AboveTheFold/index';
 import TechStack from './components/TechStack/index';
+import Projects from './components/Projects/index';
 
 export default {
     name: 'App',
     components: {
         AboveTheFold,
-        TechStack
+        TechStack,
+        Projects
     }
 }
 </script>
