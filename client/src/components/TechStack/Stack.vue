@@ -1,6 +1,5 @@
 <template>
-    <span class="tech-container">
-        <h2>build things with</h2>
+    <div class="stack-container">
         <span
             v-for="(item, index) in tech"
             :key="index"
@@ -9,17 +8,17 @@
             <StyledSVG :logo="item"/>
             <span>{{ firstUpper(item) }}</span>
         </span>
-    </span>
+    </div>
 </template>
 
 <script>
-import StyledSVG from './SVG.js';
+import StyledSVG from '../../shared/SVG.js';
 
 export default {
-    name: 'BuildWith',
+    name: 'Stack',
     components: { StyledSVG },
     data: () => ({
-        tech: ['react', 'redux', 'styled', 'node', 'knex', 'jwt', 'oauth'],
+        tech: ['react', 'redux', 'styled', 'node', 'knex', 'jwt', 'OAuth'],
     }),
     methods: {
         firstUpper(item) {
@@ -33,11 +32,8 @@ export default {
 
 <style scoped>
 
-.tech-container {
-    width: 90%;
-    max-width: 700px;
-    position: absolute;
-    bottom: 30px;
+.stack-container {
+    width: 250px;
     display: flex;
     justify-content: space-around;
     align-items: center;

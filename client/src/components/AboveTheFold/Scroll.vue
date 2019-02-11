@@ -19,8 +19,8 @@ export default {
 .mouse-container {
   height: 100px;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 48px;
+  bottom: 100px;
 
   span {
     width: 14px;
