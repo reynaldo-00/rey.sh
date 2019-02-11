@@ -27,6 +27,6 @@ export default {
     .first {
         height: 100vh;
         min-height: 0px;
-        padding: 48px;
+        padding: 24px;
     }
 </style>

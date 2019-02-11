@@ -31,9 +31,9 @@ export default {
     .tech-stack {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-        padding: 48px 24px;
+        padding: 48px;
         height: 650px;
         width: 100%;
         .info {
