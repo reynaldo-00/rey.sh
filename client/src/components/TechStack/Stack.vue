@@ -1,5 +1,6 @@
 <template>
     <div class="stack-container">
+        <h2>TOOLS</h2>
         <span
             v-for="(item, index) in tech"
             :key="index"
@@ -30,10 +31,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 .stack-container {
-    width: 250px;
+    width: 80%;
+    min-width: 380px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -42,27 +44,24 @@ export default {
     padding: 10px;
     align-content: center;
     flex-flow: row wrap;
-}
+    margin-top: 60px;
+    @media (max-width: 520px) {
+        min-height: 162px;
+    }
 
-@media (max-width: 825px) {
-    .tech-container {
-        max-width: 470px;
-    }        
-}
-
-.tech-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 20px;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-h2 {
-    position: absolute;
-    top: -70px;
+    h2 {
+        position: absolute;
+        top: 30px;
+    }
+    .tech-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20px;
+        font-size: 16px;
+        font-weight: 700;
+    }
 }
 
 </style>

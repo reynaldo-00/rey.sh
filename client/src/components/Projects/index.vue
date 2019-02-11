@@ -1,5 +1,5 @@
 <template>
-    <div class="section projects">
+    <section class="section projects">
         <h2>PROJECTS</h2>
         <div class="carousel">
             <div class="carousel-item">
@@ -24,7 +24,7 @@
             </div>
         </div>
 
-    </div>
+    </section>
 </template>
 
 <script>
@@ -34,9 +34,9 @@ export default {
 </script>
 
 <style lang="scss">
-    .projects {
-        width: 100%;
-        height: 650px;
+    section.projects {
+        width: 100vw;
+        background: black;
         padding: 48px;
         display: flex;
         flex-direction: column;

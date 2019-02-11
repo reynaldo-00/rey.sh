@@ -1,7 +1,7 @@
 <template>
-    <section class="section tech-stack">
+    <section class="tech-stack section">
+        <Stack/>
         <div class="info">
-            <h2>TECH STACK</h2>
             <p class="description">
                 Currently trying to expand my knowledge beyond my 
                 proficient stack (React and Node.js)
@@ -10,7 +10,6 @@
                 creating GraphQL APIs.
             </p>
         </div>
-        <Stack/>
     </section>
 </template>
 
@@ -28,18 +27,22 @@ export default {
 </script>
 
 <style lang="scss">
-    .tech-stack {
+    section.tech-stack {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
         padding: 48px;
-        height: 650px;
-        width: 100%;
+        width: 100vw;
+        background: rgb(29, 29, 29);
         .info {
-            width: 50%;
+            width: 80%;
+            margin-top: 40px;
+            h2 {
+                text-align: center;
+            }
             .description {
-                text-align: left;
+                text-align: center;
                 font-size: 18px;
                 line-height: 28px;
             }

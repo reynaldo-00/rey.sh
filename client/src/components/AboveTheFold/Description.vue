@@ -33,7 +33,7 @@ export default {
     title: "Software Engineer",
     location: "NYC",
     description:
-      "Fullstack Software Engineer, powerlifter, and team player. I am looking for opportunities where I can impact and improve peoples lives through code."
+      "Fullstack Software Engineer, powerlifter, streetwear enthusiast, devourer of Japanese cuisine and team player. I am looking for opportunities where I can impact and improve peoples lives through code."
   })
 };
 </script>
