@@ -19,7 +19,8 @@ export default {
     components: {
         Header,
         Description,
-        Scroll
+        Scroll,
+        Spotify
     }
 }
 </script>
