@@ -1,13 +1,14 @@
 <template>
     <section class="tech-stack section">
+        <h2>TOOLS</h2>
         <Stack/>
         <div class="info">
             <p class="description">
                 Currently trying to expand my knowledge beyond my 
-                proficient stack (React and Node.js)
-                and create applications using Vue on the client with a server 
-                side written in Golang. All while making calls to and 
-                creating GraphQL APIs.
+            proficient stack (<StyledSVG logo="react"/>React and<StyledSVG logo="node"/>Node.js) 
+            and create applications using<StyledSVG logo="vue"/>Vue on the client with a server 
+            side written in <StyledSVG logo="golang"/>Golang. All while making calls to and 
+            creating <StyledSVG logo="graphql"/>GraphQL APIs.
             </p>
         </div>
     </section>
@@ -30,21 +31,21 @@ export default {
     section.tech-stack {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         padding: 48px;
         width: 100vw;
         background: rgb(29, 29, 29);
         .info {
             width: 80%;
-            margin-top: 40px;
+            margin-top: 76px;
             h2 {
                 text-align: center;
             }
             .description {
                 text-align: center;
-                font-size: 18px;
-                line-height: 28px;
+                font-size: 20px;
+                line-height: 40px;
             }
         }
     }

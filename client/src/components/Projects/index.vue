@@ -36,7 +36,9 @@ export default {
 <style lang="scss">
     section.projects {
         width: 100vw;
-        background: black;
+        height: auto;
+        background: rgb(245,245,245);
+        color: #020424;
         padding: 48px;
         display: flex;
         flex-direction: column;

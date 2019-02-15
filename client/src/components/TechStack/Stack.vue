@@ -1,6 +1,5 @@
 <template>
     <div class="stack-container">
-        <h2>TOOLS</h2>
         <span
             v-for="(item, index) in tech"
             :key="index"
@@ -47,11 +46,6 @@ export default {
     margin-top: 60px;
     @media (max-width: 520px) {
         min-height: 162px;
-    }
-
-    h2 {
-        position: absolute;
-        top: 30px;
     }
     .tech-item {
         display: flex;

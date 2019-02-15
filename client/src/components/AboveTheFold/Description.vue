@@ -12,7 +12,7 @@
       <span>
         You can check out my recent projects on my
         <a href="https://github.com/reynld">Github</a> and
-        <a href="https://www.linkedin.com/in/reynld/">Linkedin</a>.
+        <a href="https://www.linkedin.com/in/reynld/">LinkedIn</a>.
       </span>
     </p>
   </div>
@@ -33,7 +33,7 @@ export default {
     title: "Software Engineer",
     location: "NYC",
     description:
-      "Fullstack Software Engineer, powerlifter, streetwear enthusiast, devourer of Japanese cuisine and team player. I am looking for opportunities where I can impact and improve peoples lives through code."
+      "Fullstack Software Engineer, powerlifter, streetwear enthusiast and team player. I am looking for opportunities where I can impact and improve people's lives through code."
   })
 };
 </script>

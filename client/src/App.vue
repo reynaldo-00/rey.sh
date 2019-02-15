@@ -50,5 +50,7 @@ export default {
         justify-content: flex-start;
         align-items: flex-start;
         position: relative;
+        min-height: 650px;
+        height: 100vh;
     }
 </style>

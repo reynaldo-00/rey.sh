@@ -26,8 +26,6 @@ export default {
 
 <style lang="scss">
     .first {
-        height: 100vh;
-        min-height: 0px;
         padding: 24px;
         position:relative;
         .background-img {
@@ -36,7 +34,7 @@ export default {
             height: 100vh;
             left: 0;
             top: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('../../assets/splash2.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('../../assets/splash2.jpg');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
