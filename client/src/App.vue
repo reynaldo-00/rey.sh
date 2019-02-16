@@ -36,6 +36,7 @@ export default {
         background-color: black;
         color: white;
         font-family: 'Open Sans';
+        overflow-x: hidden; 
     }
     .container {
         width: 100%;
