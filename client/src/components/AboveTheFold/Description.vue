@@ -11,8 +11,8 @@
       {{description}}
       <span>
         You can check out my recent projects on my
-        <a href="https://github.com/reynld">Github</a> and
-        <a href="https://www.linkedin.com/in/reynld/">LinkedIn</a>.
+        <a href="https://github.com/reynld" target="__blank">Github</a> and
+        <a href="https://www.linkedin.com/in/reynld/" target="__blank">LinkedIn</a>.
       </span>
     </p>
   </div>
