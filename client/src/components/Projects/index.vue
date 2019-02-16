@@ -43,8 +43,8 @@ export default {
         width: 100vw;
         height: auto;
         max-height: none;
-        background: rgb(245,245,245);
-        color: #020424;
+        background: rgb(29, 29, 29);
+        color: white;
         padding: 48px;
         display: flex;
         flex-direction: column;
@@ -55,6 +55,7 @@ export default {
             letter-spacing: 14px;
             font-size: 30px;
             margin: 0;
+            margin-bottom: 20px;
         }
     }
 </style>

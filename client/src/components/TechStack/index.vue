@@ -35,7 +35,7 @@ export default {
         align-items: center;
         padding: 48px;
         width: 100vw;
-        background: rgb(29, 29, 29);
+        background: #0e0e0e;
         h2 {
             letter-spacing: 14px;
             font-size: 30px;

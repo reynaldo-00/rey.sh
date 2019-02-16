@@ -29,6 +29,6 @@ export default [
         techStack: ['vue', 'golang', 'graphql', 'sass', 'OAuth'],
         cover: "https://i.imgur.com/Pfpb40E.png",
         repoLink: "https://github.com/reynld/rey.sh",
-        deployLink: ""
+        deployLink: "https://www.rey.sh/"
     },
 ]
