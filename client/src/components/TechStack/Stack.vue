@@ -35,6 +35,7 @@ export default {
 .stack-container {
     width: 80%;
     min-width: 380px;
+    max-width: 920px;
     display: flex;
     justify-content: space-around;
     align-items: center;

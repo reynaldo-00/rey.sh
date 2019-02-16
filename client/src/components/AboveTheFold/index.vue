@@ -2,14 +2,12 @@
     <section class="section first">
         <div class="background-img"/>
         <Spotify/>
-        <Header/>
         <Description/>
         <Scroll/>
     </section>
 </template>
 
 <script>
-import Header from './Header';
 import Spotify from './Spotify/index'
 import Description from './Description';
 import Scroll from './Scroll';
@@ -17,7 +15,6 @@ import Scroll from './Scroll';
 export default {
     name: 'AboveTheFold',
     components: {
-        Header,
         Description,
         Scroll,
         Spotify
@@ -26,13 +23,15 @@ export default {
 </script>
 
 <style lang="scss">
-    .first {
+    section.first {
         padding: 24px;
-        position:relative;
+        position: relative;
+        justify-content: center;
         .background-img {
             position: fixed;
             width: 100vw;
             height: 100vh;
+            max-height: 1080px;
             left: 0;
             top: 0;
             background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('../../assets/splash2.jpg');

@@ -36,9 +36,15 @@ export default {
         padding: 48px;
         width: 100vw;
         background: rgb(29, 29, 29);
+        h2 {
+            letter-spacing: 14px;
+            font-size: 30px;
+            margin: 0;
+        }
         .info {
             width: 80%;
             margin-top: 76px;
+            text-align: center;
             h2 {
                 text-align: center;
             }
@@ -46,6 +52,8 @@ export default {
                 text-align: center;
                 font-size: 20px;
                 line-height: 40px;
+                max-width: 920px;
+                margin: 0 auto;
             }
         }
     }

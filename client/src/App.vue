@@ -52,5 +52,6 @@ export default {
         position: relative;
         min-height: 650px;
         height: 100vh;
+        max-height: 1080px;
     }
 </style>

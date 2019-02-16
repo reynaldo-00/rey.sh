@@ -2,7 +2,7 @@ export default [
     {
         title: "Flexlog",
         description: "Fitness tracking app that lets users schedule their workouts and track their progress",
-        techStack: ['react', 'node', 'knex', 'styled', 'oauth'],
+        techStack: ['react', 'node', 'knex', 'styled', 'OAuth'],
         cover: "https://i.imgur.com/V0Is2ct.png",
         repoLink: "https://github.com/Lambda-School-Labs/labs9-workout-tracker",
         deployLink: "https://flexlog.app/"
@@ -18,7 +18,7 @@ export default [
     {
         title: "Carbtographer",
         description: "Map that shows macro friendly options for nearby restaurants",
-        techStack: ['react', 'node', 'graph', 'knex', 'styled', 'oauth', 'react-map-gl',],
+        techStack: ['react', 'node', 'graphql', 'knex', 'styled', 'OAuth', 'react-map-gl',],
         cover: "https://i.imgur.com/CBKF7Tm.png",
         repoLink: "https://github.com/reynld/carbtographer",
         deployLink: ""
@@ -26,7 +26,7 @@ export default [
     {
         title: "Portfolio",
         description: "Personal portfolio site built with Vue and Golang",
-        techStack: ['vue', 'golang', 'grpah', 'sass', 'oauth'],
+        techStack: ['vue', 'golang', 'graphql', 'sass', 'OAuth'],
         cover: "https://i.imgur.com/Pfpb40E.png",
         repoLink: "https://github.com/reynld/rey.sh",
         deployLink: ""

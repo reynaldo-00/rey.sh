@@ -9,7 +9,7 @@
                 :cover="project.cover"
                 :repoLink="project.repoLink"
                 :deployLink="project.deployLink"
-                :teckStack="project.techStack"
+                :techStack="project.techStack"
                 :key="project.id"
             />
         </div>
@@ -42,6 +42,7 @@ export default {
     section.projects {
         width: 100vw;
         height: auto;
+        max-height: none;
         background: rgb(245,245,245);
         color: #020424;
         padding: 48px;
@@ -49,21 +50,11 @@ export default {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        .carousel-item {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            .title {
-                font-size: 22px;
-            }
-            .preview-img {
-                height: 320px;
-                width:  auto;
-            }
-            .description {
-                font-size: 18px;
-            }
+
+        h2 {
+            letter-spacing: 14px;
+            font-size: 30px;
+            margin: 0;
         }
     }
 </style>
