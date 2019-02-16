@@ -50,7 +50,8 @@ export default {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-
+        padding-top: 100px;
+        padding-bottom: 100px;
         h2 {
             letter-spacing: 14px;
             font-size: 30px;
