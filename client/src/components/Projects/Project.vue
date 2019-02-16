@@ -3,14 +3,6 @@
         <div class="info-container">
             <h3 class="title">{{title}}</h3>
             <p class="description">{{description}}</p>
-            <div class="links-container">
-                <a :href="repoLink" target="__blank">REPO</a>
-                <a v-if="deployLink.length !== 0" :href="deployLink" target="__blank">SITE</a>
-            </div>
-        </div>
-        <div class="img-container">
-            <img class="preview-img" :src="cover"/>
-        </div>
         <!-- <div class="tech-used">
             <span
                 v-for="(item, index) in techStack"
@@ -21,14 +13,22 @@
                 <span>{{item}}</span>
             </span>
         </div> -->
+            <div class="links-container">
+                <a :href="repoLink" target="__blank">REPO</a>
+                <a v-if="deployLink.length !== 0" :href="deployLink" target="__blank">SITE</a>
+            </div>
+        </div>
+        <div class="img-container">
+            <img class="preview-img" :src="cover"/>
+        </div>
     </div>
 </template>
 
 <script>
-import StyledSVG from '../../shared/SVG.js';
+// import StyledSVG from '../../shared/SVG.js';
 export default {
     name: "Project",
-    components: {StyledSVG},
+    // components: {StyledSVG},
     props: [
         'title', 
         'description', 

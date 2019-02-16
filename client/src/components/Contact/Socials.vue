@@ -1,5 +1,8 @@
 <template>
     <div class="header">
+        <a class="item" href="https://twitter.com/creynl" target="_blank">
+            <StyledSVG twitter/>
+        </a>
         <a class="item" href="https://codepen.io/reynld/" target="_blank">
             <StyledSVG codepen/>
         </a>
@@ -16,7 +19,7 @@
 import StyledSVG from '../../shared/SVG.js';
 
 export default {
-    name: 'Header',
+    name: 'Socials',
     components: {
         StyledSVG
     }

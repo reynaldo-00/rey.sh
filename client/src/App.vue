@@ -3,6 +3,7 @@
         <AboveTheFold/>
         <TechStack/>
         <Projects/>
+        <Contact/>
     </div>
 </template>
 
@@ -10,13 +11,15 @@
 import AboveTheFold from './components/AboveTheFold/index';
 import TechStack from './components/TechStack/index';
 import Projects from './components/Projects/index';
+import Contact from './components/Contact/index';
 
 export default {
     name: 'App',
     components: {
         AboveTheFold,
         TechStack,
-        Projects
+        Projects,
+        Contact
     }
 }
 </script>
