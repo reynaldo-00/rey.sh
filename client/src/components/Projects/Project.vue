@@ -46,11 +46,10 @@ export default {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin: 0 auto;
-        margin-top: 40px;
+        margin: 80px auto;
         width: 100%;
         min-width: 380px;
-        max-width: 720px;
+        max-width: 920px;
         background: #0e0e0e;
         height: 280px;
         border-radius: 2px;
@@ -63,7 +62,10 @@ export default {
         &:hover {
             transform: scale(1.03);
             .img-container > .preview-img {
-                height: 100%;
+                width: 110%;
+            }
+            .info-container > .links-container > a {
+                opacity: 1;
             }
         }
         .img-container {
@@ -77,8 +79,8 @@ export default {
                 display: none;
             }
             .preview-img {
-                height: 120%;
-                width: auto;
+                height: auto;
+                width: 100%;
                 transition: all .4s ease-in-out;
             }
         }
