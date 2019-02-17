@@ -32,7 +32,7 @@ export default {
     }),
     methods: {
         getCurrentlyPlaying: async function() {
-            const songRes = await axios('http://localhost:9001/spotify');
+            const songRes = await axios('https://rey-portfolio.herokuapp.com/spotify');
             this.currentlyPlaying = songRes.data;
         },
     },

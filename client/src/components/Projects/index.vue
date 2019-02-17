@@ -28,7 +28,7 @@ export default {
     }),
     methods: {
         getProjects: async function()  {
-            // const resp = await axios('http://localhost:9001/repos');
+            // const resp = await axios('http://https://rey-portfolio.herokuapp.com/repos');
             this.projects = proData;
         },
     },
