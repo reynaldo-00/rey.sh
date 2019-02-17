@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <Spotify/>
         <AboveTheFold/>
         <TechStack/>
         <Projects/>
@@ -12,6 +13,7 @@ import AboveTheFold from './components/AboveTheFold/index';
 import TechStack from './components/TechStack/index';
 import Projects from './components/Projects/index';
 import Contact from './components/Contact/index';
+import Spotify from './components/Spotify';
 
 export default {
     name: 'App',
@@ -19,7 +21,8 @@ export default {
         AboveTheFold,
         TechStack,
         Projects,
-        Contact
+        Contact,
+        Spotify,
     }
 }
 </script>

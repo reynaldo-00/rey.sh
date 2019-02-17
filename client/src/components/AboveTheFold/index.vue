@@ -1,14 +1,12 @@
 <template>
     <section class="section first">
         <div class="background-img"/>
-        <Spotify/>
         <Description/>
         <Scroll/>
     </section>
 </template>
 
 <script>
-import Spotify from './Spotify/index'
 import Description from './Description';
 import Scroll from './Scroll';
 
@@ -16,8 +14,7 @@ export default {
     name: 'AboveTheFold',
     components: {
         Description,
-        Scroll,
-        Spotify
+        Scroll
     }
 }
 </script>

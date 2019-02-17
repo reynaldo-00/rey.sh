@@ -20,7 +20,7 @@
 <script>
 import axios from 'axios';
 import SoundBars from './SoundBars'
-import StyledSVG from '../../../shared/SVG.js'
+import StyledSVG from '../../shared/SVG.js'
 
 export default {
     name: 'Spotify',
@@ -91,7 +91,7 @@ export default {
     }
 
     a {
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 0px;
         width: 300px;
