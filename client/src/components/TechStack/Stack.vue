@@ -45,6 +45,11 @@ export default {
     align-content: center;
     flex-flow: row wrap;
     margin-top: 60px;
+    @media (max-width: 620px) {
+        height: 305px;
+        min-width: 285px;
+        width: 285px;
+    }
     @media (max-width: 520px) {
         min-height: 162px;
     }

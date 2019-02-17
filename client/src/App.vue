@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <AboveTheFold/>
-        <!-- <TechStack/>
-        <Projects/>
+        <TechStack/>
+        <!-- <Projects/>
         <Contact/> -->
     </div>
 </template>
@@ -58,5 +58,9 @@ export default {
         min-height: 650px;
         height: 100vh;
         max-height: 1080px;
+        @media (max-width: 620px) {
+            height: auto;
+            max-height: none;
+        }
     }
 </style>
