@@ -3,7 +3,7 @@
         <AboveTheFold/>
         <TechStack/>
         <Projects/>
-        <!-- <Contact/> -->
+        <Contact/>
     </div>
 </template>
 
@@ -60,7 +60,7 @@ export default {
         max-height: 1080px;
         @media (max-width: 620px) {
             height: auto;
-            max-height: none;
+            min-width: 330px;
         }
     }
 </style>
