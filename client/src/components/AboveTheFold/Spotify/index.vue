@@ -6,6 +6,7 @@
             target="_blank" 
             class="spotify-wrapper"
         >
+            <span class="currently">CURRENTLY LISTENING TO</span>
             <StyledSVG logo="spotify"/>
             <span class="info-container">
                 <h3>{{ getSongAndArtist }}</h3>
@@ -79,6 +80,14 @@ export default {
     }
     .slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
         transform: translateX(-300px);
+    }
+    .currently {
+        position: absolute;
+        bottom: -18px;
+        right: 18px;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 5px;
     }
 
     a {
