@@ -21,6 +21,9 @@ export default {
   position: absolute;
   right: 48px;
   bottom: 100px;
+  @media (max-width: 590px) {
+    top: 100px;
+  }
 
   span {
     width: 14px;

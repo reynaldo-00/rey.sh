@@ -1,9 +1,9 @@
 <template>
     <div class="container">
         <AboveTheFold/>
-        <TechStack/>
+        <!-- <TechStack/>
         <Projects/>
-        <Contact/>
+        <Contact/> -->
     </div>
 </template>
 
@@ -41,6 +41,7 @@ export default {
     .container {
         width: 100%;
         max-width: 1000px;
+        min-width: 330px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;

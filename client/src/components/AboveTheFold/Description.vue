@@ -45,6 +45,11 @@ export default {
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
+  @media (max-width: 620px) {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
   h2.name {
     font-family: "Montserrat";
     font-size: 44px;
@@ -53,12 +58,18 @@ export default {
     line-height: 50px;
     user-select: none;
     text-transform: capitalize;
+    @media (max-width: 555px) {
+      width: 300px;
+    }
   }
   h3.intro {
     font-weight: 600;
     font-size: 24px;
     line-height: 28px;
     user-select: none;
+    @media (max-width: 620px) {
+      line-height: 38px;
+    }
   }
   p.description {
     font-size: 18px;

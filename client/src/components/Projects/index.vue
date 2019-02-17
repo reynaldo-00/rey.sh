@@ -58,5 +58,8 @@ export default {
             margin: 0;
             margin-bottom: 20px;
         }
+        .carousel {
+            width: 100%;
+        }
     }
 </style>

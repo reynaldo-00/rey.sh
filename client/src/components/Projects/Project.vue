@@ -56,6 +56,9 @@ export default {
         box-shadow: 0 2px 3px rgba(0,0,0,.5);
         transition: transform .4s ease-in-out;
         transform: scale(1);
+        @media (max-width: 620px) {
+
+        }
         &:hover {
             transform: scale(1.03);
             .img-container > .preview-img {
