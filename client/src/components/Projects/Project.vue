@@ -46,6 +46,7 @@ export default {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        margin: 0 auto;
         margin-top: 40px;
         width: 100%;
         min-width: 380px;
@@ -57,7 +58,7 @@ export default {
         transition: transform .4s ease-in-out;
         transform: scale(1);
         @media (max-width: 620px) {
-
+            min-width: 290px;
         }
         &:hover {
             transform: scale(1.03);
@@ -72,6 +73,9 @@ export default {
             justify-content: center;
             align-items: flex-start;
             overflow: hidden;
+            @media (max-width: 620px) {
+                display: none;
+            }
             .preview-img {
                 height: 120%;
                 width: auto;
@@ -87,6 +91,9 @@ export default {
             flex-direction: column;
             justify-content: flex-start;
             position: relative;
+            @media (max-width: 620px) {
+                width: 100%;
+            }
             .title {
                 font-size: 22px;
                 margin: 0;

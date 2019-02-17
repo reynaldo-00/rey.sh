@@ -61,5 +61,12 @@ export default {
         .carousel {
             width: 100%;
         }
+        @media (max-width: 620px) {
+            width: 100vw;
+            .carousel {
+                width: 100vw;
+                padding: 20px;
+            }
+        }
     }
 </style>

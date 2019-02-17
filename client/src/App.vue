@@ -2,8 +2,8 @@
     <div class="container">
         <AboveTheFold/>
         <TechStack/>
-        <!-- <Projects/>
-        <Contact/> -->
+        <Projects/>
+        <!-- <Contact/> -->
     </div>
 </template>
 
