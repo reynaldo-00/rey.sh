@@ -58,6 +58,8 @@ export default {
         transform: scale(1);
         @media (max-width: 620px) {
             min-width: 290px;
+            height: 560px;
+            flex-direction: column;
         }
         &:hover {
             transform: scale(1.03);
@@ -76,7 +78,8 @@ export default {
             align-items: flex-start;
             overflow: hidden;
             @media (max-width: 620px) {
-                display: none;
+                width: 100%;
+                height: 50%;
             }
             .preview-img {
                 height: auto;
@@ -95,6 +98,7 @@ export default {
             position: relative;
             @media (max-width: 620px) {
                 width: 100%;
+                height: 50%;
             }
             .title {
                 font-size: 22px;
