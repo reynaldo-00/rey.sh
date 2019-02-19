@@ -37,7 +37,7 @@ export default {
             min-width: 330px;
             left: 0;
             top: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('../../assets/splash2.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url('../../assets/splash.jpg');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;

@@ -64,7 +64,7 @@ export default {
         &:hover {
             transform: scale(1.03);
             .img-container > .preview-img {
-                width: 110%;
+                height: 103%;
             }
             .info-container > .links-container > a {
                 opacity: 1;
@@ -84,6 +84,8 @@ export default {
             .preview-img {
                 height: auto;
                 width: 100%;
+                height: 100%;
+                width: auto;
                 transition: all .4s ease-in-out;
             }
         }
