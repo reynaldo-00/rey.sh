@@ -9,7 +9,7 @@ type GQLQuery struct {
 }
 
 // GithubResp response struct to store response from github api
-type GithubResp struct {
+type Resp struct {
 	Data struct {
 		Viewer struct {
 			PinnedRepositories struct {

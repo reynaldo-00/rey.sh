@@ -27,7 +27,7 @@ func GetProjects(w http.ResponseWriter, req *http.Request) {
 		log.Fatalln(err)
 	}
 
-	var result GithubResp
+	var result Resp
 	json.NewDecoder(resp.Body).Decode(&result)
 
 	json.NewEncoder(w).Encode(result.Data.Viewer.PinnedRepositories.Nodes)
