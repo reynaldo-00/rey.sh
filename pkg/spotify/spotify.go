@@ -8,22 +8,10 @@ import (
 	"os"
 	"strconv"
 	"strings"
-
-	"github.com/joho/godotenv"
 )
 
-// TokenResponse struct to mirror refresh token response
-type TokenResponse struct {
-	AccessToken  string `json:"access_token"`
-	TokenType    string `json:"token_type"`
-	Scope        string `json:"scope"`
-	ExpiresIn    int    `json:"expires_in"`
-	RefreshToken string `json:"refresh_token"`
-}
-
-// GetAccessToken Makes call to spotify api to get a refreshed token
-func GetAccessToken() string {
-	godotenv.Load()
+// getAccessToken Makes call to spotify api to get a refreshed token
+func getAccessToken() string {
 	refereshURL := "https://accounts.spotify.com/api/token"
 	spotifyRefreshToken := os.Getenv("SPOTIFY_REFRESH_TOKEN")
 	spotifyClientID := os.Getenv("SPOTIFY_CLIENT_ID")
@@ -51,8 +39,7 @@ func GetAccessToken() string {
 
 // GetSpotify gets my the song im currently listening to
 func GetSpotify(w http.ResponseWriter, req *http.Request) {
-	spotifyToken := GetAccessToken()
-	// fmt.Println(spotifyToken)
+	spotifyToken := getAccessToken()
 
 	url := "https://api.spotify.com/v1/me/player/currently-playing"
 	client := &http.Client{}
@@ -72,8 +59,6 @@ func GetSpotify(w http.ResponseWriter, req *http.Request) {
 	var result map[string]interface{}
 	json.NewDecoder(resp.Body).Decode(&result)
 
-	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	w.Header().Set("Access-Control-Allow-Origin", "*")
 	json.NewEncoder(w).Encode(result)
 	log.Println("GET /spotify successful")
 }

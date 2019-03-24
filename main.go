@@ -5,16 +5,15 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
-	"github.com/reynld/github"
-	"github.com/reynld/spotify"
+	"github.com/joho/godotenv"
+	"github.com/reynld/rey.sh/pkg/github"
+	"github.com/reynld/rey.sh/pkg/spotify"
 )
 
 // GetServerIsUp '/' engpoint cheks if server is up
 func GetServerIsUp(w http.ResponseWriter, req *http.Request) {
-	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	w.Header().Set("Access-Control-Allow-Origin", "*")
-
 	message := "GetRequestAt /" + port
 	fmt.Println(message)
 
@@ -25,7 +24,7 @@ func GetServerIsUp(w http.ResponseWriter, req *http.Request) {
 var port string
 
 func main() {
-
+	godotenv.Load()
 	r := mux.NewRouter()
 	port = ":9001"
 
@@ -33,5 +32,5 @@ func main() {
 	r.HandleFunc("/repos", github.GetProjects).Methods("GET")
 	r.HandleFunc("/spotify", spotify.GetSpotify).Methods("GET")
 	fmt.Println("Server live on port " + port)
-	log.Fatal(http.ListenAndServe(port, r))
+	log.Fatal(http.ListenAndServe(port, handlers.CORS()(r)))
 }
