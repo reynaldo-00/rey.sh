@@ -8,7 +8,7 @@ type GQLQuery struct {
 	Query string `json:"query"`
 }
 
-// GithubResp response struct to store response from github api
+//Resp response struct to store response from github api
 type Resp struct {
 	Data struct {
 		Viewer struct {
