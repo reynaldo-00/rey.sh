@@ -13,12 +13,12 @@ export default [
         techStack: ['react', 'node', 'knex', 'styled', 'jwt'],
         cover: "https://res.cloudinary.com/ddpztixxl/image/upload/v1550555801/google-keep.png",
         repoLink: "https://github.com/reynld/keep-clone",
-        deployLink: ""
+        deployLink: "https://google-keep-clone.now.sh/"
     },
     {
         title: "Carbtographer",
         description: "Map that shows macro friendly options for nearby restaurants",
-        techStack: ['react', 'node', 'graphql', 'knex', 'styled', 'OAuth', 'react-map-gl',],
+        techStack: ['react', 'node', 'graphql', 'golang', 'styled', 'react-map-gl',],
         cover: "https://res.cloudinary.com/ddpztixxl/image/upload/v1550556387/carbtographer.png",
         repoLink: "https://github.com/reynld/carbtographer",
         deployLink: ""
