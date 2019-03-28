@@ -11,12 +11,10 @@
         { "src": "/spotify", "methods": ["GET"], "dest": "/server/spotify/index.go" },
         { "src": "/repos", "methods": ["GET"], "dest": "/server/repos/index.go" }
     ],
-    "build": {
-        "env": {
-            "GIT_API_KEY": "@git-api-key",
-            "SPOTIFY_REFRESH_TOKEN": "@spotify-refresh-token",
-            "SPOTIFY_CLIENT_ID": "@spotify-client-id",
-            "SPOTIFY_CLIENT_SECRET": "@spotify-client-secret"
-        }
+    "env": {
+        "GIT_API_KEY": "@git-api-key",
+        "SPOTIFY_REFRESH_TOKEN": "@spotify-refresh-token",
+        "SPOTIFY_CLIENT_ID": "@spotify-client-id",
+        "SPOTIFY_CLIENT_SECRET": "@spotify-client-secret"
     }
 }
