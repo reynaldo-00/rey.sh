@@ -5,6 +5,7 @@
 .env.production.local
 *.sqlite3
 now-secrets.json
+/node_modules
 
 npm-debug.log*
 yarn-debug.log*
