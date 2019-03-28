@@ -33,7 +33,7 @@ export default {
     }),
     methods: {
         getCurrentlyPlaying: async function() {
-            const songRes = await axios('https://rey-portfolio.herokuapp.com/spotify');
+            const songRes = await axios('https://portfolio.reynaldo.now.sh/spotify');
             this.currentlyPlaying = songRes.data;
         },
     },

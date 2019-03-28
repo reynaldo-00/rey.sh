@@ -3,9 +3,6 @@
         <a class="item" href="https://twitter.com/creynl" target="_blank">
             <StyledSVG twitter/>
         </a>
-        <a class="item" href="https://codepen.io/reynld/" target="_blank">
-            <StyledSVG codepen/>
-        </a>
         <a class="item" href="https://github.com/reynld" target="_blank">
             <StyledSVG github/>
         </a>

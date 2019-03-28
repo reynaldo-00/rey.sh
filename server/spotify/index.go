@@ -48,6 +48,7 @@ func getAccessToken() string {
 
 // Handler gets my the song im currently listening to
 func Handler(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	spotifyToken := getAccessToken()
 
 	url := "https://api.spotify.com/v1/me/player/currently-playing"

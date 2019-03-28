@@ -111,6 +111,7 @@ var githubQuery = `query {
 
 // Handler gets pinned repositories of my github profile
 func Handler(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	githubKey := os.Getenv("GIT_API_KEY")
 	pinnedRepo := GQLQuery{Query: githubQuery}
 	pinquery, _ := json.Marshal(pinnedRepo)

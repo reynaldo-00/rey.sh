@@ -2,7 +2,7 @@
     <section class="section contact">
         <h2>CONTACT</h2>
         <Socials/>
-        <a class="resume" href="https://drive.google.com/file/d/1VlqZZ3CyWsqqwzTgMT2CSnWSOi29lkg8/view?usp=sharing" target="__blank">RESUME</a>
+        <a class="resume" href="https://drive.google.com/file/d/16VvAD55pIMu287AUMNckg9oOqutb_Nnb/view?usp=sharing" target="__blank">RESUME</a>
     </section>
 </template>
 
