@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "name": "portfolio",
+    "builds": [
+        { "src": "/server/*.go", "use": "@now/go@canary" },
+        { "src": "/server/repos/*.go", "use": "@now/go@canary" },
+        { "src": "/server/spotify/*.go", "use": "@now/go@canary" }
+    ],
+    "routes": [
+        { "src": "/", "methods": ["GET"], "dest": "/server/index.go" },
+        { "src": "/spotify", "methods": ["GET"], "dest": "/server/spotify/index.go" },
+        { "src": "/repos", "methods": ["GET"], "dest": "/server/repos/index.go" }
+    ],
+    "env": {
+        "GIT_API_KEY": "@git-api-key",
+        "SPOTIFY_REFRESH_TOKEN": "@spotify-refresh-token",
+        "SPOTIFY_CLIENT_ID": "@spotify-client-id",
+        "SPOTIFY_CLIENT_SECRET": "@spotify-client-secret"
+    }
+}

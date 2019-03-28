@@ -21,7 +21,7 @@ export default [
         techStack: ['react', 'node', 'graphql', 'golang', 'styled', 'react-map-gl',],
         cover: "https://res.cloudinary.com/ddpztixxl/image/upload/v1550556387/carbtographer.png",
         repoLink: "https://github.com/reynld/carbtographer",
-        deployLink: ""
+        deployLink: "https://www.carbtographer.com/"
     },
     {
         title: "Portfolio",

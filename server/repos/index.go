@@ -1,6 +1,13 @@
-package github
+package main
 
-import "time"
+import (
+	"bytes"
+	"encoding/json"
+	"log"
+	"net/http"
+	"os"
+	"time"
+)
 
 // GQLQuery struct to hold query string
 type GQLQuery struct {
@@ -53,4 +60,78 @@ type Resp struct {
 			} `json:"pinnedRepositories"`
 		} `json:"viewer"`
 	} `json:"data"`
+}
+
+var githubQuery = `query {
+	viewer {
+	  pinnedRepositories(first: 10){
+		totalCount
+		nodes {
+			id
+			name
+		  url
+		  pushedAt
+		  shortDescriptionHTML
+		  defaultBranchRef {
+			target {
+			  ...on Commit {
+				history(first:10) {
+				  totalCount
+				}
+			  }
+			}
+		  }
+		  repositoryTopics(first:10) {
+			edges {
+			  node {
+				id
+				topic {
+				  name
+				}
+			  }
+			}
+		  }
+		  languages(first: 10) {
+			nodes {
+			  color
+			  id
+			  name
+			}
+		  }
+		  primaryLanguage {
+			color
+			id
+			name
+		  }
+		}
+	  }
+	}
+  }
+`
+
+// Handler gets pinned repositories of my github profile
+func Handler(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	githubKey := os.Getenv("GIT_API_KEY")
+	pinnedRepo := GQLQuery{Query: githubQuery}
+	pinquery, _ := json.Marshal(pinnedRepo)
+
+	client := &http.Client{}
+	req, error := http.NewRequest("POST", "https://api.github.com/graphql", bytes.NewBuffer(pinquery))
+	if error != nil {
+		log.Fatalln(error)
+	}
+
+	req.Header.Add("Authorization", "bearer "+githubKey)
+
+	resp, err := client.Do(req)
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	var result Resp
+	json.NewDecoder(resp.Body).Decode(&result)
+
+	json.NewEncoder(w).Encode(result.Data.Viewer.PinnedRepositories.Nodes)
+	log.Println("GET /repos successful")
 }

@@ -1,4 +1,4 @@
-package spotify
+package main
 
 import (
 	"encoding/json"
@@ -9,6 +9,15 @@ import (
 	"strconv"
 	"strings"
 )
+
+// TokenResponse struct to mirror refresh token response
+type TokenResponse struct {
+	AccessToken  string `json:"access_token"`
+	TokenType    string `json:"token_type"`
+	Scope        string `json:"scope"`
+	ExpiresIn    int    `json:"expires_in"`
+	RefreshToken string `json:"refresh_token"`
+}
 
 // getAccessToken Makes call to spotify api to get a refreshed token
 func getAccessToken() string {
@@ -37,8 +46,9 @@ func getAccessToken() string {
 	return result.AccessToken
 }
 
-// GetSpotify gets my the song im currently listening to
-func GetSpotify(w http.ResponseWriter, req *http.Request) {
+// Handler gets my the song im currently listening to
+func Handler(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	spotifyToken := getAccessToken()
 
 	url := "https://api.spotify.com/v1/me/player/currently-playing"
