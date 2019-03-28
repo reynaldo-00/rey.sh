@@ -2,19 +2,19 @@
     "version": 2,
     "name": "portfolio",
     "builds": [
-        { "src": "*.go", "use": "@now/go@canary" },
-        { "src": "/repos/*.go", "use": "@now/go@canary" },
-        { "src": "/spotify/*.go", "use": "@now/go@canary" }
+        { "src": "/server/*.go", "use": "@now/go@canary" },
+        { "src": "/server/repos/*.go", "use": "@now/go@canary" },
+        { "src": "/server/spotify/*.go", "use": "@now/go@canary" }
     ],
     "routes": [
-        { "src": "/", "methods": ["GET"], "dest": "/index.go" },
-        { "src": "/spotify", "methods": ["GET"], "dest": "/repos/index.go" },
-        { "src": "/repos", "methods": ["GET"], "dest": "/spotify/index.go" }
+        { "src": "/", "methods": ["GET"], "dest": "/server/index.go" },
+        { "src": "/spotify", "methods": ["GET"], "dest": "/server/spotify/index.go" },
+        { "src": "/repos", "methods": ["GET"], "dest": "/server/repos/index.go" }
     ],
     "env": {
-        "GIT_API_KEY": "d66047c139d25c882d9bcca13fffbc7ba2a1e393",
-        "SPOTIFY_REFRESH_TOKEN": "AQBJnHZVr3KKrtgSRq4rC56hlORaq-tcNn_mxIWXC-v7zK8Ht2YRcx3_6wTuj_e5edQsnbu1bWqSGhZ8HZjBt4KSjQBdBT6tzxMIc02o0GHbsxB3Vhkrr1QxIGOtB47oYbXzww",
-        "SPOTIFY_CLIENT_ID": "972151e5dfff4f58b8c7de649e1ec990",
-        "SPOTIFY_CLIENT_SECRET": "cafd291a039b4dcabb38ac1765e269ec"
+        "GIT_API_KEY": "@git-api-key",
+        "SPOTIFY_REFRESH_TOKEN": "@spotify-refresh-token",
+        "SPOTIFY_CLIENT_ID": "@spotify-client-id",
+        "SPOTIFY_CLIENT_SECRET": "@spotify-client-secret"
     }
 }
