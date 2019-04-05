@@ -14,6 +14,7 @@ import TechStack from './components/TechStack/index';
 import Projects from './components/Projects/index';
 import Contact from './components/Contact/index';
 import Spotify from './components/Spotify';
+import { page } from 'vue-analytics'
 
 export default {
     name: 'App',
@@ -23,6 +24,14 @@ export default {
         Projects,
         Contact,
         Spotify,
+    },
+    methods: {
+        track () {
+            page('/')
+        }
+    },
+    beforeMount: function() {
+        this.track();
     }
 }
 </script>
