@@ -7,8 +7,7 @@
                 Currently trying to expand my knowledge beyond my 
                 proficient stack (<StyledSVG logo="react"/>React and<StyledSVG logo="node"/>Node.js) 
                 and create applications using<StyledSVG logo="vue"/>Vue on the client with a server 
-                side written in <StyledSVG logo="golang"/>Golang. All while making calls to and 
-                creating <StyledSVG logo="graphql"/>GraphQL APIs.
+                side written in <StyledSVG logo="golang"/>Golang.
             </p>
         </div>
     </section>

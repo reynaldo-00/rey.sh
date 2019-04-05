@@ -18,7 +18,7 @@ export default {
     name: 'Stack',
     components: { StyledSVG },
     data: () => ({
-        tech: ['react', 'redux', 'styled', 'node', 'knex', 'jwt', 'OAuth'],
+        tech: ['react', 'redux', 'styled', 'node', 'knex', 'OAuth'],
     }),
     methods: {
         firstUpper(item) {

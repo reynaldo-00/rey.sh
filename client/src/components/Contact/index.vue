@@ -2,7 +2,7 @@
     <section class="section contact">
         <h2>CONTACT</h2>
         <Socials/>
-        <a class="resume" href="https://drive.google.com/file/d/16VvAD55pIMu287AUMNckg9oOqutb_Nnb/view?usp=sharing" target="__blank">RESUME</a>
+        <a class="resume" :href="resume" target="__blank">RESUME</a>
     </section>
 </template>
 
@@ -11,6 +11,12 @@ import Socials from './Socials';
 export default {
     name: "Contact",
     components: {Socials},
+    data: () => ({
+        resume: String
+    }),
+    beforeMount() {
+        this.resume = process.env.VUE_APP_RESUME_URL
+    }
 }
 </script>
 
@@ -32,6 +38,8 @@ export default {
             border: solid white 2px;
             border-radius: 16px;
             padding: 5px 20px;
+            cursor: pointer;
+            user-select: none;
         }
         h2 {
             letter-spacing: 14px;
