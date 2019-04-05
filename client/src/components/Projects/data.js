@@ -19,7 +19,7 @@ export default [
         title: "Carbtographer",
         description: "Map that shows macro friendly options for nearby restaurants",
         techStack: ['react', 'node', 'graphql', 'golang', 'styled', 'react-map-gl',],
-        cover: "https://res.cloudinary.com/ddpztixxl/image/upload/v1550556387/carbtographer.png",
+        cover: "https://res.cloudinary.com/ddpztixxl/image/upload/v1554436775/carbto-min.png",
         repoLink: "https://github.com/reynld/carbtographer",
         deployLink: "https://www.carbtographer.com/"
     },
