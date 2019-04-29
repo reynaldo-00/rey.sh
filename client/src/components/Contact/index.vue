@@ -2,7 +2,6 @@
     <section class="section contact">
         <h2>CONTACT</h2>
         <Socials/>
-        <a class="resume" :href="resume" target="__blank">RESUME</a>
     </section>
 </template>
 
@@ -29,18 +28,6 @@ export default {
         padding: 48px;
         width: 100vw;
         background: #0e0e0e;
-        a.resume {
-            text-decoration: none;
-            color: white;
-            font-size: 22px;
-            font-weight: bold;
-            letter-spacing: 4px;
-            border: solid white 2px;
-            border-radius: 16px;
-            padding: 5px 20px;
-            cursor: pointer;
-            user-select: none;
-        }
         h2 {
             letter-spacing: 14px;
             font-size: 30px;

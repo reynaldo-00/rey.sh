@@ -1,11 +1,9 @@
 <template>
     <div class="header">
-        <a class="item" href="https://twitter.com/creynl" target="_blank">
-            <StyledSVG twitter/>
-        </a>
         <a class="item" href="https://github.com/reynld" target="_blank">
             <StyledSVG github/>
         </a>
+        <a class="resume" :href="resume" target="__blank">RESUME</a>
         <a class="item" href="https://www.linkedin.com/in/reynld/" target="_blank">
             <StyledSVG linkedin/>
         </a>
@@ -23,7 +21,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .header {
     width: 100%;
     height: 180px;
@@ -32,14 +30,26 @@ export default {
     justify-content: center;
     align-items: center;
     padding: 0;
-}
-.item {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    margin: 0 20px;
-    cursor: pointer;
-    text-decoration: none;
+    a.item {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        margin: 0 20px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    a.resume {
+        text-decoration: none;
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        border: solid white 2px;
+        border-radius: 16px;
+        padding: 5px 20px;
+        cursor: pointer;
+        user-select: none;
+    }
 }
 </style>
