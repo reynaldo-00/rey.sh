@@ -132,7 +132,7 @@ export default {
         }
         .tech-used {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             align-items: center;
             flex-wrap: wrap;
             width: 100%;
