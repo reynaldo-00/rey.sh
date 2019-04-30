@@ -2,14 +2,6 @@
     <section class="tech-stack section">
         <h2 class="title">TOOLS</h2>
         <Stack/>
-        <div class="info">
-            <p class="description">
-                Currently trying to expand my knowledge beyond my 
-                proficient stack (<StyledSVG logo="react"/>React and<StyledSVG logo="node"/>Node.js) 
-                and create applications using<StyledSVG logo="vue"/>Vue on the client with a server 
-                side written in <StyledSVG logo="golang"/>Golang.
-            </p>
-        </div>
     </section>
 </template>
 
