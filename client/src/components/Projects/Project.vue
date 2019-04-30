@@ -3,7 +3,7 @@
         <div class="info-container">
             <h3 class="title">{{title}}</h3>
             <p class="description">{{description}}</p>
-        <!-- <div class="tech-used">
+        <div class="tech-used">
             <span
                 v-for="(item, index) in techStack"
                 :key="index"
@@ -12,7 +12,7 @@
                 <StyledSVG :logo="item"/>
                 <span>{{item}}</span>
             </span>
-        </div> -->
+        </div>
             <div class="links-container">
                 <a :href="repoLink" target="__blank">REPO</a>
                 <a v-if="deployLink.length !== 0" :href="deployLink" target="__blank">SITE</a>
@@ -25,10 +25,10 @@
 </template>
 
 <script>
-// import StyledSVG from '../../shared/SVG.js';
+import StyledSVG from '../../shared/SVG.js';
 export default {
     name: "Project",
-    // components: {StyledSVG},
+    components: {StyledSVG},
     props: [
         'title', 
         'description', 
@@ -48,26 +48,27 @@ export default {
         align-items: center;
         margin: 80px auto;
         width: 100%;
-        min-width: 380px;
         max-width: 920px;
         background: #0e0e0e;
-        height: 280px;
+        height: 380px;
         border-radius: 2px;
         box-shadow: 0 2px 3px rgba(0,0,0,.5);
         transition: transform .4s ease-in-out;
         transform: scale(1);
         @media (max-width: 620px) {
-            min-width: 290px;
-            height: 560px;
+            width: 100%;
+            height: 700px;
             flex-direction: column;
         }
-        &:hover {
-            transform: scale(1.03);
-            .img-container > .preview-img {
-                height: 103%;
-            }
-            .info-container > .links-container > a {
-                opacity: 1;
+        @media (min-width: 620px) {
+            &:hover {
+                transform: scale(1.03);
+                .img-container > .preview-img {
+                    height: 103%;
+                }
+                .info-container > .links-container > a {
+                    opacity: 1;
+                }
             }
         }
         .img-container {
@@ -131,20 +132,16 @@ export default {
         }
         .tech-used {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             width: 100%;
-            background-color: rgb(29, 29, 29);
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: 20px;
             .tech-item {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                margin: 0 20px;
-                font-size: 16px;
+                font-size: 12px;
                 font-weight: 700;
                 span {
                     color: white;

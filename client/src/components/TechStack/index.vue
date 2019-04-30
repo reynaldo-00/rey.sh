@@ -12,8 +12,7 @@ import StyledSVG from '../../shared/SVG.js'
 export default {
     name: 'TechStack',
     components: {
-        Stack,
-        StyledSVG
+        Stack
     }
 }
 </script>
