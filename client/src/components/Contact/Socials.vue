@@ -17,6 +17,12 @@ export default {
     name: 'Socials',
     components: {
         StyledSVG
+    },
+    data: () => ({
+        resume: String
+    }),
+    beforeMount() {
+        this.resume = process.env.VUE_APP_RESUME_URL
     }
 }
 </script>
