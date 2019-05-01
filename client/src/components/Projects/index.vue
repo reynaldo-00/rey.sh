@@ -65,7 +65,7 @@ export default {
             width: 100vw;
             .carousel {
                 width: 100vw;
-                padding: 20px;
+                padding: 40px;
             }
         }
     }
